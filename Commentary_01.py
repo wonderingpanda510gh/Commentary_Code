@@ -31,7 +31,7 @@ def grad_norms_per_layer(linears):
     norms = []
     for layer in linears:
         g = layer.weight.grad
-        norms.append(float(g.norm().detach().cpu()))
+        norms.append(g.norm().detach().cpu())
     return norms
 
 # Experiment setup
